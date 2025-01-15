@@ -1,8 +1,9 @@
+DEPS= Janry
 compile: main.c 
-	 gcc main.c -o ming
+	 gcc main.c -o $(DEPS)
+	 
+run: $(DEPS)
+	 ./$(DEPS)
 
-run: ming
-	 ./ming
-
-clean: ming
-	 rm ming
+clean: $(DEPS)
+	 rm $(DEPS)
